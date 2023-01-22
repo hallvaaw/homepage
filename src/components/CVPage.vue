@@ -1,0 +1,80 @@
+<template>
+    <section class="m-6">
+        <h2 class="text-6xl text-gray-200 font-bold font-mono">CV</h2>
+        <article>
+            <h3 class="text-3xl text-gray-200 font-bold font-mono ml-16">Education</h3>
+            <div v-if="hoverEducation == true">
+                <p class="text-xl text-gray-200 font-mono ml-16">Title: {{ eduItem[0].Title }}</p>
+                <p class="text-xl text-gray-200 font-mono ml-16">Details: {{ eduItem[0].Details }}</p>
+                <p class="text-xl text-gray-200 font-mono ml-16">University of Oslo</p>
+            </div>
+            <div v-else class="h-[84px]"></div>
+            <table class="grid place-items-center my-12">
+                <tr class="bg-gray-800 text-2xl text-gray-200 text-center font-mono font-bold">
+                    <td @mouseover="onHoverBachelor(eduEntries[1])" @mouseleave="mouseOff(eduEntries[1])" class="w-52 h-52 m-6 hover:bg-blue-200 hover:text-gray-800 hover:cursor-default">2015</td>
+                    <td @mouseover="onHoverBachelor(eduEntries[1])" @mouseleave="mouseOff(eduEntries[1])" class="w-52 h-52 m-6 hover:bg-blue-200 hover:text-gray-800 hover:cursor-default">2016</td>
+                    <td @mouseover="onHoverBachelor(eduEntries[1])" @mouseleave="mouseOff(eduEntries[1])" class="w-52 h-52 m-6 hover:bg-blue-200 hover:text-gray-800 hover:cursor-default">2017</td>
+                    <td @mouseover="onHover([eduEntries[1], jobEntries[4], jobEntries[5]])" @mouseleave="mouseOff(eduEntries[1])" class="w-52 h-52 m-6 hover:bg-blue-200 hover:text-gray-800 hover:cursor-default">2018</td>
+                    <td @mouseover="onHover([eduEntries[0], jobEntries[2], jobEntries[3]])" @mouseleave="mouseOff(eduEntries[1])" class="w-52 h-52 m-6 hover:bg-blue-200 hover:text-gray-800 hover:cursor-default">2019</td>
+                    <td @mouseover="onHover([eduEntries[0], jobEntries[0], jobEntries[1]])" @mouseleave="mouseOff(eduEntries[1])" class="w-52 h-52 m-6 hover:bg-blue-200 hover:text-gray-800 hover:cursor-default">2020-t.d.</td>
+                </tr>
+            </table>
+            <h3 class="text-3xl text-gray-200 font-bold font-mono ml-16">Work Experience</h3>
+            <div v-if="hoverWork == true">
+                <p class="text-xl text-gray-200 font-mono ml-16">Title: {{ jobItem[0].Title }}</p>
+                <p class="text-xl text-gray-200 font-mono ml-16">Details: {{ jobItem[0].Details }}</p>
+                <p class="text-xl text-gray-200 font-mono ml-16">University of Oslo</p>
+                <p class="text-xl text-gray-200 font-mono ml-16 mt-10">Title: {{ jobItem[1].Title }}</p>
+                <p class="text-xl text-gray-200 font-mono ml-16">Details: {{ jobItem[1].Details }}</p>
+                <p class="text-xl text-gray-200 font-mono ml-16">University of Oslo</p>
+            </div>
+        </article>
+    </section>
+</template>
+
+<script>
+export default {
+    name: 'CVPage',
+    data() {
+        return {
+            eduEntries: [
+                {Title: "Master's degree in molecular biology.", Details: "Automation of high throughput image analysis techniques in microscopy.", hover: false},
+                {Title: "Bachelor's degree in biology", Details: "Molecular and computational biology", hover: false}],
+            jobEntries: [
+                {Title: "Doctoral candidate in computational biology.", Details: "Computational analysis of gene regulation in development and disease.", hover: false},
+                {Title: "Scientific assistant in Python programming.", Details: "Making curriculum and coding challenges in Python for a course in computational biology.", hover: false},
+                {Title: "Scientific assistant in R programming.", Details: "Making curriculum, coding challenges and exercises for a course in statistics.", hover: false},
+                {Title: "Summer intern in computational biology.", Details: "Data sorting, analysis and visualization.", hover: false},
+                {Title: "Teaching assistant in Python programming.", Details: "Tutoring, reviewing code and live coding in Python.", hover: false},
+                {Title: "Scientific assistant in R programming.", Details: "Making curriculum, coding challenges and exercises for a course in statistics.", hover: false}
+            ],
+            hoverEducation: false,
+            eduItem: [],
+            jobItem: []
+        }
+    },
+    methods: {
+        onHover(e) {
+            this.hoverEducation = true
+            this.hoverWork = true
+            e[0].hover = true
+            this.eduItem.push(e[0])
+            this.jobItem.push(e[1])
+            this.jobItem.push(e[2])
+        },
+        onHoverBachelor(e) {
+            this.hoverEducation = true
+            e.hover = true
+            this.eduItem.push(e)
+        },
+        mouseOff(e) {
+            e.hover = false
+            this.hoverEducation = false
+            this.hoverWork = false
+            this.eduItem.pop()
+            this.jobItem.pop()
+            this.jobItem.pop()
+        }
+    }
+}
+</script>
