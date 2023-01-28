@@ -11,12 +11,12 @@
             <div v-else class="h-[84px]"></div>
             <table class="grid place-items-center my-12">
                 <tr class="bg-gray-800 text-2xl text-gray-200 text-center font-mono font-bold">
-                    <td @mouseover="onHoverBachelor(eduEntries[1])" @mouseleave="mouseOff(eduEntries[1])" class="w-52 h-52 m-6 hover:bg-blue-200 hover:text-gray-800 hover:cursor-default">2015</td>
-                    <td @mouseover="onHoverBachelor(eduEntries[1])" @mouseleave="mouseOff(eduEntries[1])" class="w-52 h-52 m-6 hover:bg-blue-200 hover:text-gray-800 hover:cursor-default">2016</td>
-                    <td @mouseover="onHoverBachelor(eduEntries[1])" @mouseleave="mouseOff(eduEntries[1])" class="w-52 h-52 m-6 hover:bg-blue-200 hover:text-gray-800 hover:cursor-default">2017</td>
-                    <td @mouseover="onHover([eduEntries[1], jobEntries[4], jobEntries[5]])" @mouseleave="mouseOff(eduEntries[1])" class="w-52 h-52 m-6 hover:bg-blue-200 hover:text-gray-800 hover:cursor-default">2018</td>
-                    <td @mouseover="onHover([eduEntries[0], jobEntries[2], jobEntries[3]])" @mouseleave="mouseOff(eduEntries[1])" class="w-52 h-52 m-6 hover:bg-blue-200 hover:text-gray-800 hover:cursor-default">2019</td>
-                    <td @mouseover="onHover([eduEntries[0], jobEntries[0], jobEntries[1]])" @mouseleave="mouseOff(eduEntries[1])" class="w-52 h-52 m-6 hover:bg-blue-200 hover:text-gray-800 hover:cursor-default">2020-t.d.</td>
+                    <td @mouseover="onHoverBachelor(eduEntries[1])" @mouseleave="mouseOff(eduEntries[1])" class="w-52 h-32 xl:h-52 m-6 hover:bg-blue-200 hover:text-gray-800 hover:cursor-default">2015</td>
+                    <td @mouseover="onHoverBachelor(eduEntries[1])" @mouseleave="mouseOff(eduEntries[1])" class="w-52 h-32 xl:h-52 m-6 hover:bg-blue-200 hover:text-gray-800 hover:cursor-default">2016</td>
+                    <td @mouseover="onHoverBachelor(eduEntries[1])" @mouseleave="mouseOff(eduEntries[1])" class="w-52 h-32 xl:h-52 m-6 hover:bg-blue-200 hover:text-gray-800 hover:cursor-default">2017</td>
+                    <td @mouseover="onHover([eduEntries[1], jobEntries[4], jobEntries[5]])" @mouseleave="mouseOff(eduEntries[1])" class="w-52 h-32 xl:h-52 m-6 hover:bg-blue-200 hover:text-gray-800 hover:cursor-default">2018</td>
+                    <td @mouseover="onHover([eduEntries[0], jobEntries[2], jobEntries[3]])" @mouseleave="mouseOff(eduEntries[1])" class="w-52 h-32 xl:h-52 m-6 hover:bg-blue-200 hover:text-gray-800 hover:cursor-default">2019</td>
+                    <td @mouseover="onHover([eduEntries[0], jobEntries[0], jobEntries[1]])" @mouseleave="mouseOff(eduEntries[1])" class="w-52 h-32 xl:h-52 m-6 hover:bg-blue-200 hover:text-gray-800 hover:cursor-default">2020-t.d.</td>
                 </tr>
             </table>
             <h3 class="text-3xl text-gray-200 font-bold font-mono ml-16">Work Experience</h3>
