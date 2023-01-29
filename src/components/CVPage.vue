@@ -1,8 +1,8 @@
 <template>
     <section class="m-6">
-        <h2 class="text-6xl text-gray-200 font-bold font-mono mt-16">CV</h2>
+        <h1 class="text-6xl text-gray-200 font-bold font-mono mt-16">CV</h1>
         <article>
-            <h3 class="text-3xl text-gray-200 font-bold font-mono ml-12">Education</h3>
+            <h2 class="text-3xl text-gray-200 font-bold font-mono ml-12">Education</h2>
             <div v-if="hoverEducation == true">
                 <p class="text-xl text-gray-200 font-mono ml-12">Title: {{ eduItem[0].Title }}</p>
                 <p class="text-xl text-gray-200 font-mono ml-12">Details: {{ eduItem[0].Details }}</p>
@@ -19,7 +19,7 @@
                     <td @mouseover="onHover([eduEntries[0], jobEntries[0], jobEntries[1]])" @mouseleave="mouseOff(eduEntries[1])" class="w-52 h-32 xl:h-52 m-6 hover:bg-blue-200 hover:text-gray-800 hover:cursor-default">2020-t.d.</td>
                 </tr>
             </table>
-            <h3 class="text-3xl text-gray-200 font-bold font-mono ml-12">Work Experience</h3>
+            <h2 class="text-3xl text-gray-200 font-bold font-mono ml-12">Work Experience</h2>
             <div v-if="hoverWork == true">
                 <p class="text-xl text-gray-200 font-mono ml-12">Title: {{ jobItem[0].Title }}</p>
                 <p class="text-xl text-gray-200 font-mono ml-12">Details: {{ jobItem[0].Details }}</p>
