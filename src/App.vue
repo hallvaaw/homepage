@@ -2,9 +2,9 @@
     <main class="flex flex-row">
         <aside class="bg-verydarkGray w-96 h-screen">
             <h1 class="text-gray-200 font-mono font-bold text-3xl m-6">Hallvard A. Wæhler</h1>
-            <ul class="space-y-3 m-6">
-                <li @click="openAboutComp()" class="text-darkPurple text-2xl font-bold hover:text-blue-900 hover:cursor-pointer" :class="AboutComp == true ? 'text-blue-900': ''">About</li>
-                <li @click="openCVComp()" class="text-darkPurple text-2xl font-bold hover:text-blue-900 hover:cursor-pointer" :class="CVComp == true ? 'text-blue-900': ''">CV</li>
+            <ul class="space-y-3">
+                <li @click="openAboutComp()" class="text-2xl font-bold p-6 hover:text-darkPurple hover:cursor-pointer" :class="AboutComp == true ? 'text-darkPurple bg-darkGray': 'text-blue-900'">About</li>
+                <li @click="openCVComp()" class="text-2xl font-bold p-6 hover:text-darkPurple hover:cursor-pointer" :class="CVComp == true ? 'text-darkPurple bg-darkGray': 'text-blue-900'">CV</li>
             </ul>
             <div class="space-y-2 space-x-6 m-6 mt-20">
                 <a class="text-darkPurple text-lg hover:text-blue-900" href="https://github.com/hallvaaw" target="_blank" rel="noopener noreferrer">GitHub</a>
