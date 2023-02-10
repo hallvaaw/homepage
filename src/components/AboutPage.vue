@@ -1,7 +1,7 @@
 <template>
-    <h1 class="text-4xl text-gray-200 font-bold font-mono mt-16">I am a bioinformatician and software developer</h1>
+    <h1 class="text-4xl text-gray-200 font-bold font-mono mt-16 ml-6">I am a bioinformatician and software developer</h1>
     <article>
-        <h2 class="text-3xl text-gray-200 font-bold font-mono ml-16 mt-12">I make stuff with: {{ hoverTitle }}</h2>
+        <h2 class="text-3xl text-gray-200 font-bold font-mono ml-12 mt-6">I make stuff with: {{ hoverTitle }}</h2>
         <table class="m-12 mt-20 xl:ml-56">
             <tr>
                 <td @mouseover="onHover('Python')" class="border-8 border-darkGray"><img class="bg-gray-200 h-20 w-20 xl:h-36 xl:w-36 hover:bg-darkGray hover:duration-100" src="../assets/python-svgrepo-com.svg" title="Python" alt="Python"></td> 
