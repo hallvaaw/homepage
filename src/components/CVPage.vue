@@ -8,7 +8,7 @@
                 <p class="text-md xl:text-xl text-gray-200 font-mono ml-12">Details: {{ eduItem[0].Details }}</p>
                 <p class="text-md xl:text-xl text-gray-200 font-mono ml-12">University of Oslo</p>
             </div>
-            <div v-else class="h-[120px] xl:h-[84px]"></div>
+            <div v-else class="h-[72px] xl:h-[84px]"></div>
             <table class="grid place-items-center my-12">
                 <tr class="bg-gray-800 text-lg xl:text-2xl text-gray-200 text-center font-mono font-bold">
                     <td @mouseover="onHoverBachelor(eduEntries[1])" @mouseleave="mouseOff(eduEntries[1])" class="w-20 h-20 xl:h-52 xl:w-52 m-6 hover:bg-blue-200 hover:text-gray-800 hover:cursor-default">2015</td>
