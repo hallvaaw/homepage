@@ -15,7 +15,7 @@
                 <td @mouseover="onHover('Bash')" class="border-8 border-darkGray"><img class="bg-gray-200 h-20 w-20 xl:h-36 xl:w-36 hover:bg-darkGray hover:duration-100" src="../assets/terminal-bash-svgrepo-com.svg" title="Bash" alt="Bash"></td> 
                 <td @mouseover="onHover('R')" class="border-8 border-darkGray"><img class="bg-gray-200 h-20 w-20 xl:h-36 xl:w-36 hover:bg-darkGray hover:duration-100" src="../assets/r-svgrepo-com.svg" title="R" alt="R"></td> 
                 <td @mouseover="onHover('Inkscape')" class="border-8 border-darkGray"><img class="bg-gray-200 h-20 w-20 xl:h-36 xl:w-36 hover:bg-darkGray hover:duration-100" src="../assets/inkscape-svgrepo-com.svg" title="Inkscape" alt="Inkscape"></td> 
-                <td @mouseover="onHover('GIMP')" class="border-8 border-darkGray"><img class="bg-gray-200 h-20 w-20 xl:h-36 xl:w-36 hover:bg-darkGray hover:duration-100" src="../assets/gimp-logo-editor-2-svgrepo-com.svg" title="Gimp" alt="Gimp"></td> 
+                <td @mouseover="onHover('Tauri')" class="border-8 border-darkGray"><img class="bg-gray-200 h-20 w-20 xl:h-36 xl:w-36 hover:bg-darkGray hover:duration-100" src="../assets/tauri.svg" title="Tauri" alt="Tauri"></td> 
             </tr>
         </table>  
     </article>
