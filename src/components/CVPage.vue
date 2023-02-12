@@ -15,8 +15,8 @@
                     <td @mouseover="onHoverBachelor(eduEntries[1])" @mouseleave="mouseOff(eduEntries[1])" class="w-20 h-20 xl:h-52 xl:w-52 m-6 hover:bg-blue-200 hover:text-gray-800 hover:cursor-default">2016</td>
                     <td @mouseover="onHoverBachelor(eduEntries[1])" @mouseleave="mouseOff(eduEntries[1])" class="w-20 h-20 xl:h-52 xl:w-52 m-6 hover:bg-blue-200 hover:text-gray-800 hover:cursor-default">2017</td>
                     <td @mouseover="onHover([eduEntries[1], jobEntries[4], jobEntries[5]])" @mouseleave="mouseOff(eduEntries[1])" class="w-20 h-20 xl:h-52 xl:w-52 m-6 hover:bg-blue-200 hover:text-gray-800 hover:cursor-default">2018</td>
-                    <td @mouseover="onHover([eduEntries[0], jobEntries[2], jobEntries[3]])" @mouseleave="mouseOff(eduEntries[1])" class="w-20 h-20 xl:h-52 xl:w-52 m-6 hover:bg-blue-200 hover:text-gray-800 hover:cursor-default">2019</td>
-                    <td @mouseover="onHover([eduEntries[0], jobEntries[0], jobEntries[1]])" @mouseleave="mouseOff(eduEntries[1])" class="w-20 h-20 xl:h-52 xl:w-52 m-6 hover:bg-blue-200 hover:text-gray-800 hover:cursor-default">2020-t.d.</td>
+                    <td @mouseover="onHover([eduEntries[0], jobEntries[2], jobEntries[3]])" @mouseleave="mouseOff(eduEntries[0])" class="w-20 h-20 xl:h-52 xl:w-52 m-6 hover:bg-blue-200 hover:text-gray-800 hover:cursor-default">2019</td>
+                    <td @mouseover="onHover([eduEntries[0], jobEntries[0], jobEntries[1]])" @mouseleave="mouseOff(eduEntries[0])" class="w-20 h-20 xl:h-52 xl:w-52 m-6 hover:bg-blue-200 hover:text-gray-800 hover:cursor-default">2020-t.d.</td>
                 </tr>
             </table>
             <h2 class="text-3xl text-gray-200 font-bold font-mono ml-12">Work Experience</h2>
@@ -49,6 +49,7 @@ export default {
                 {Title: "Scientific assistant in R programming.", Details: "Making curriculum, coding challenges and exercises for a course in statistics.", hover: false}
             ],
             hoverEducation: false,
+            hoverWork: false,
             eduItem: [],
             jobItem: []
         }
@@ -57,7 +58,7 @@ export default {
         onHover(e) {
             this.hoverEducation = true
             this.hoverWork = true
-            e[0].hover = true
+            e.hover = true
             this.eduItem.push(e[0])
             this.jobItem.push(e[1])
             this.jobItem.push(e[2])
