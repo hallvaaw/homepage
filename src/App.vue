@@ -1,6 +1,6 @@
 <template>
-    <main class="flex flex-row xl:h-screen">
-        <aside class="bg-verydarkGray w-96">
+    <main class="flex flex-row h-screen">
+        <aside class="bg-verydarkGray w-96 h-screen">
             <h1 class="text-gray-200 font-mono font-bold text-3xl m-6">Hallvard A. Wæhler</h1>
             <ul class="space-y-3">
                 <li @click="openAboutComp()" class="text-2xl font-bold p-6 hover:text-darkPurple hover:cursor-pointer hover:duration-150" :class="AboutComp == true ? 'text-darkPurple bg-darkGray': 'text-blue-900'">About</li>
