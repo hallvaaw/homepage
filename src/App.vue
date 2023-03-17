@@ -3,12 +3,13 @@
         <aside class="bg-verydarkGray w-96 min-h-screen">
             <h1 class="text-gray-200 font-mono font-bold text-3xl m-6">Hallvard A. Wæhler</h1>
             <ul class="space-y-3">
-                <li @click="openAboutComp()" class="text-2xl font-bold p-6 hover:text-darkPurple hover:cursor-pointer hover:duration-150" :class="AboutComp == true ? 'text-darkPurple bg-darkGray': 'text-blue-900'">About</li>
-                <li @click="openCVComp()" class="text-2xl font-bold p-6 hover:text-darkPurple hover:cursor-pointer hover:duration-150" :class="CVComp == true ? 'text-darkPurple bg-darkGray': 'text-blue-900'">CV</li>
+                <li @click="openAboutComp()" class="text-2xl font-bold p-6 pl-12 hover:text-darkPurple hover:cursor-pointer hover:duration-150" :class="AboutComp == true ? 'text-darkPurple bg-darkGray': 'text-blue-900'">About</li>
+                <li @click="openCVComp()" class="text-2xl font-bold p-6 pl-12 hover:text-darkPurple hover:cursor-pointer hover:duration-150" :class="CVComp == true ? 'text-darkPurple bg-darkGray': 'text-blue-900'">CV</li>
             </ul>
-            <div class="space-y-2 space-x-6 m-6 mt-20">
+            <div class="flex flex-col space-y-6 mt-16 pl-12">
                 <a class="text-darkPurple text-lg hover:text-blue-900 hover:duration-150" href="https://github.com/hallvaaw" target="_blank" rel="noopener noreferrer">GitHub</a>
                 <a class="text-darkPurple text-lg hover:text-blue-900 hover:duration-150" href="https://www.linkedin.com/in/hallvard-austin-wæhler/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                <a class="text-darkPurple text-lg hover:text-blue-900 hover:duration-150" href="https://hallvardwaehler.substack.com" target="_blank" rel="noopener noreferrer">Substack</a>
             </div>
         </aside>
         <section class="bg-darkGray w-screen" v-if="AboutComp == true">
