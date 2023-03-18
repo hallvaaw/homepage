@@ -3,12 +3,12 @@
         <h1 class="text-6xl text-gray-200 font-bold font-mono mt-16">CV</h1>
         <article>
             <h2 class="text-3xl text-gray-200 font-bold font-mono ml-12">Education</h2>
-            <div v-if="hoverEducation == true">
+            <div v-if="hoverEducation == true" class="space-y-2">
                 <p class="text-md xl:text-xl text-gray-200 font-mono ml-12">Title: {{ eduItem[0].Title }}</p>
                 <p class="text-md xl:text-xl text-gray-200 font-mono ml-12">Details: {{ eduItem[0].Details }}</p>
                 <p class="text-md xl:text-xl text-gray-200 font-mono ml-12">University of Oslo</p>
             </div>
-            <div v-else class="h-[72px] xl:h-[84px]"></div>
+            <div v-else class="h-[72px] xl:h-[99px]"></div>
             <table class="grid place-items-center my-12 xl:mr-52">
                 <tr class="bg-gray-800 text-lg xl:text-2xl text-gray-200 text-center font-mono font-bold">
                     <td @mouseover="onHoverBachelor(eduEntries[1])" @mouseleave="mouseOff(eduEntries[1])" class="w-20 h-20 xl:h-52 xl:w-52 m-6 hover:bg-blue-200 hover:text-gray-800 hover:cursor-default">2015</td>
@@ -20,11 +20,11 @@
                 </tr>
             </table>
             <h2 class="text-3xl text-gray-200 font-bold font-mono ml-12">Work Experience</h2>
-            <div v-if="hoverWork == true">
+            <div v-if="hoverWork == true" class="space-y-2">
                 <p class="text-md xl:text-xl text-gray-200 font-mono ml-12">Title: {{ jobItem[0].Title }}</p>
                 <p class="text-md xl:text-xl text-gray-200 font-mono ml-12">Details: {{ jobItem[0].Details }}</p>
                 <p class="text-md xl:text-xl text-gray-200 font-mono ml-12">University of Oslo</p>
-                <p class="text-md xl:text-xl text-gray-200 font-mono ml-12 mt-10">Title: {{ jobItem[1].Title }}</p>
+                <p class="text-md xl:text-xl text-gray-200 font-mono ml-12 pt-10">Title: {{ jobItem[1].Title }}</p>
                 <p class="text-md xl:text-xl text-gray-200 font-mono ml-12">Details: {{ jobItem[1].Details }}</p>
                 <p class="text-md xl:text-xl text-gray-200 font-mono ml-12">University of Oslo</p>
             </div>
