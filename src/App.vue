@@ -9,7 +9,6 @@
             <div class="flex flex-col space-y-6 mt-16 pl-12">
                 <a class="text-darkPurple text-lg hover:text-blue-900 hover:duration-150" href="https://github.com/hallvaaw" target="_blank" rel="noopener noreferrer">GitHub</a>
                 <a class="text-darkPurple text-lg hover:text-blue-900 hover:duration-150" href="https://www.linkedin.com/in/hallvard-austin-wæhler/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-                <a class="text-darkPurple text-lg hover:text-blue-900 hover:duration-150" href="https://hallvardwaehler.substack.com" target="_blank" rel="noopener noreferrer">Substack</a>
             </div>
         </aside>
         <section class="bg-darkGray w-screen" v-if="AboutComp == true">
