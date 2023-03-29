@@ -1,33 +1,37 @@
 <template>
     <section class="m-6">
         <h1 class="text-6xl text-gray-200 font-bold font-mono mt-16">CV</h1>
-        <article>
-            <h2 class="text-3xl text-gray-200 font-bold font-mono ml-12">Education</h2>
-            <div v-if="hoverEducation == true" class="space-y-2">
-                <p class="text-md xl:text-xl text-gray-200 font-mono ml-12">Title: {{ eduItem[0].Title }}</p>
-                <p class="text-md xl:text-xl text-gray-200 font-mono ml-12">Details: {{ eduItem[0].Details }}</p>
-                <p class="text-md xl:text-xl text-gray-200 font-mono ml-12">University of Oslo</p>
-            </div>
-            <div v-else class="h-[72px] xl:h-[99px]"></div>
-            <table class="grid place-items-center my-12 xl:mr-52">
-                <tr class="bg-gray-800 text-lg xl:text-2xl text-gray-200 text-center font-mono font-bold">
-                    <td @mouseover="onHoverBachelor(eduEntries[1])" @mouseleave="mouseOff(eduEntries[1])" class="w-20 h-20 xl:h-52 xl:w-52 m-6 hover:bg-blue-200 hover:text-gray-800 hover:cursor-default">2015</td>
-                    <td @mouseover="onHoverBachelor(eduEntries[1])" @mouseleave="mouseOff(eduEntries[1])" class="w-20 h-20 xl:h-52 xl:w-52 m-6 hover:bg-blue-200 hover:text-gray-800 hover:cursor-default">2016</td>
-                    <td @mouseover="onHoverBachelor(eduEntries[1])" @mouseleave="mouseOff(eduEntries[1])" class="w-20 h-20 xl:h-52 xl:w-52 m-6 hover:bg-blue-200 hover:text-gray-800 hover:cursor-default">2017</td>
-                    <td @mouseover="onHover([eduEntries[1], jobEntries[4], jobEntries[5]])" @mouseleave="mouseOff(eduEntries[1])" class="w-20 h-20 xl:h-52 xl:w-52 m-6 hover:bg-blue-200 hover:text-gray-800 hover:cursor-default">2018</td>
-                    <td @mouseover="onHover([eduEntries[0], jobEntries[2], jobEntries[3]])" @mouseleave="mouseOff(eduEntries[0])" class="w-20 h-20 xl:h-52 xl:w-52 m-6 hover:bg-blue-200 hover:text-gray-800 hover:cursor-default">2019</td>
-                    <td @mouseover="onHover([eduEntries[0], jobEntries[0], jobEntries[1]])" @mouseleave="mouseOff(eduEntries[0])" class="w-20 h-20 xl:h-52 xl:w-52 m-6 hover:bg-blue-200 hover:text-gray-800 hover:cursor-default">2020-t.d.</td>
-                </tr>
-            </table>
-            <h2 class="text-3xl text-gray-200 font-bold font-mono ml-12">Work Experience</h2>
-            <div v-if="hoverWork == true" class="space-y-2">
-                <p class="text-md xl:text-xl text-gray-200 font-mono ml-12">Title: {{ jobItem[0].Title }}</p>
-                <p class="text-md xl:text-xl text-gray-200 font-mono ml-12">Details: {{ jobItem[0].Details }}</p>
-                <p class="text-md xl:text-xl text-gray-200 font-mono ml-12">University of Oslo</p>
-                <p class="text-md xl:text-xl text-gray-200 font-mono ml-12 pt-10">Title: {{ jobItem[1].Title }}</p>
-                <p class="text-md xl:text-xl text-gray-200 font-mono ml-12">Details: {{ jobItem[1].Details }}</p>
-                <p class="text-md xl:text-xl text-gray-200 font-mono ml-12">University of Oslo</p>
-            </div>
+        <article class="grid grid-cols-3">
+            <article class="mt-32">
+                <h2 class="text-3xl text-gray-200 font-bold font-mono ml-12">Education</h2>
+                <div v-if="hoverEducation == true" class="space-y-2">
+                    <p class="text-md xl:text-xl text-gray-200 font-mono ml-12">Title: {{ eduItem[0].Title }}</p>
+                    <p class="text-md xl:text-xl text-gray-200 font-mono ml-12">Details: {{ eduItem[0].Details }}</p>
+                    <p class="text-md xl:text-xl text-gray-200 font-mono ml-12">University of Oslo</p>
+                </div>
+                <div v-else class="h-[72px] xl:h-[99px]"></div>
+            </article>
+            <article>
+                <div class="flex flex-col my-12 text-lg xl:text-2xl text-gray-200 items-center font-mono font-bold">
+                    <div @mouseover="onHover([eduEntries[0], jobEntries[0], jobEntries[1]])" @mouseleave="mouseOff(eduEntries[0])" class="flex bg-gray-800 w-20 h-20 items-center justify-center xl:h-32 xl:w-32 hover:bg-blue-200 hover:text-gray-800 hover:cursor-default">2020+</div>
+                    <div @mouseover="onHover([eduEntries[0], jobEntries[2], jobEntries[3]])" @mouseleave="mouseOff(eduEntries[0])" class="flex bg-gray-800 w-20 h-20 items-center justify-center xl:h-32 xl:w-32 hover:bg-blue-200 hover:text-gray-800 hover:cursor-default">2019</div>
+                    <div @mouseover="onHover([eduEntries[1], jobEntries[4], jobEntries[5]])" @mouseleave="mouseOff(eduEntries[1])" class="flex bg-gray-800 w-20 h-20 items-center justify-center xl:h-32 xl:w-32 hover:bg-blue-200 hover:text-gray-800 hover:cursor-default">2018</div>
+                    <div @mouseover="onHoverBachelor(eduEntries[1])" @mouseleave="mouseOff(eduEntries[1])" class="flex bg-gray-800 w-20 h-20 items-center justify-center xl:h-32 xl:w-32 hover:bg-blue-200 hover:text-gray-800 hover:cursor-default">2017</div>
+                    <div @mouseover="onHoverBachelor(eduEntries[1])" @mouseleave="mouseOff(eduEntries[1])" class="flex bg-gray-800 w-20 h-20 items-center justify-center xl:h-32 xl:w-32 hover:bg-blue-200 hover:text-gray-800 hover:cursor-default">2016</div>
+                    <div @mouseover="onHoverBachelor(eduEntries[1])" @mouseleave="mouseOff(eduEntries[1])" class="flex bg-gray-800 w-20 h-20 items-center justify-center xl:h-32 xl:w-32 hover:bg-blue-200 hover:text-gray-800 hover:cursor-default">2015</div>
+                </div>
+            </article>
+            <article class="mt-32">
+                <h2 class="text-3xl text-gray-200 font-bold font-mono ml-12">Work Experience</h2>
+                <div v-if="hoverWork == true" class="space-y-2">
+                    <p class="text-sm xl:text-xl text-gray-200 font-mono">Title: {{ jobItem[0].Title }}</p>
+                    <p class="text-sm xl:text-xl text-gray-200 font-mono">Details: {{ jobItem[0].Details }}</p>
+                    <p class="text-sm xl:text-xl text-gray-200 font-mono">University of Oslo</p>
+                    <p class="text-sm xl:text-xl text-gray-200 font-mono pt-10">Title: {{ jobItem[1].Title }}</p>
+                    <p class="text-sm xl:text-xl text-gray-200 font-mono">Details: {{ jobItem[1].Details }}</p>
+                    <p class="text-sm xl:text-xl text-gray-200 font-mono">University of Oslo</p>
+                </div>
+            </article>
         </article>
     </section>
 </template>
