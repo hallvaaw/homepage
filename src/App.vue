@@ -1,55 +1,27 @@
 <template>
-    <main class="flex flex-row min-h-screen">
-        <aside class="bg-verydarkGray w-96 min-h-screen">
-            <h1 class="text-gray-200 font-mono font-bold text-3xl m-6">Hallvard A. Wæhler</h1>
-            <ul class="space-y-3">
-                <li @click="openAboutComp()" class="text-2xl font-bold p-6 pl-12 hover:text-darkPurple hover:cursor-pointer hover:duration-150" :class="AboutComp == true ? 'text-darkPurple bg-darkGray': 'text-blue-900'">About</li>
-                <li @click="openCVComp()" class="text-2xl font-bold p-6 pl-12 hover:text-darkPurple hover:cursor-pointer hover:duration-150" :class="CVComp == true ? 'text-darkPurple bg-darkGray': 'text-blue-900'">CV</li>
-            </ul>
-            <div class="flex flex-col space-y-6 mt-16 pl-12">
-                <a class="text-darkPurple text-lg hover:text-blue-900 hover:duration-150" href="https://github.com/hallvaaw" target="_blank" rel="noopener noreferrer">GitHub</a>
-                <a class="text-darkPurple text-lg hover:text-blue-900 hover:duration-150" href="https://www.linkedin.com/in/hallvard-austin-wæhler/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-            </div>
-        </aside>
-        <section class="bg-darkGray w-screen" v-if="AboutComp == true">
-            <AboutPage />
-        </section>
-        <section class="bg-darkGray w-screen" v-else>
-            <CVPage />
-        </section>
+    <main class="container">
+        <h1>Hallvard A. Wæhler</h1>
+        <p>I am a bioinformatician and software developer.</p>
+        <p>I am involved in research projects focusing on biological image analysis and genetics. My main tasks include writing data pipelines, making desktop applications, statistical analysis and front end development.</p>
+        <h5>Main technologies:</h5>
+        <ul style="margin-left: 26px;">
+           <li>Python</li>
+           <li>R</li>
+           <li>Vue</li>
+           <li>Svelte</li>
+           <li>Linux</li>
+        </ul>
+        <h3>Current projects:</h3>
+        <p>ANDA: A desktop application for automated image analysis made with Tauri.</p>
+        <p>ShinyArchRUiO: A platform for visualizing genetic analyses at single cell resolution written in R.</p>
     </main>
+    <footer class="container">
+        <h3>Contact</h3>
+        <h6 style="margin-bottom: 6px;"><a href="https://github.com/hallvaaw" target="_blank" rel="noopener noreferrer">GitHub</a></h6>
+        <h6><a href="https://www.linkedin.com/in/hallvard-austin-wæhler/" target="_blank" rel="noopener noreferrer">LinkedIn</a></h6>
+    </footer>
 </template>
 
 <script>
-import CVPage from './components/CVPage.vue'
-import AboutPage from './components/AboutPage.vue'
-
 console.log("WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW\nWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW\nWWWWWWWWWWWWKxxxxxxxxxxxxxxxxxxxxxxxxxxNWWWWWWWWWWWW\nWWWWWWWWWWWWk''''''''''''''''''''''''''XWWWWWWWWWWWW\nWWWWWWWWWWWWk''''''''''''''''''''''''''XWWWWWWWWWWWW\nWWWWWWWWWWWWk''''''''''''''''''''''''''XWWWWWWWWWWWW\nWWWN00000000d''''''''''''''''''''''''''k0000000KWWWW\nWWWK''''''''''''''''''''''''''''''''''''''''''':WWWW\nWWWK''''''''''''''''''''''''''''''''''''''''''':WWWW\nWWWK''''''''''''''''''''''''''''''''''''''''''':WWWW\nWWWK'''''''',;;;;;;;;;;;;;;;;;;;;;;;;;;'''''''':WWWW\nWWWK''''''''oWWWWWWWWWWWWWWWWWWWWWWWWWW;''''''':WWWW\nWWWK''''''''oWWWWWWWWWWWWWWWWWWWWWWWWWW;''''''':WWWW\nWWWK''''''''oWWWWWWWWWWWWWWWWWWWWWWWWWW;''''''':WWWW\nWWWK''''''''oWWWWWWWWWWWWWWWWWWWWWWWWWW;''''''':WWWW\nWWWK'''''''',;;;;;;;;;;;;;;;;;;;;;;;;;;'''''''':WWWW\nWWWK''''''''''''''''''''''''''''''''''''''''''':WWWW\nWWWK''''''''''''''''''''''''''''''''''''''''''':WWWW\nWWWK''''''''''''''''''''''''''''''''''''''''''':WWWW\nWWWK''''''''c00000000l''''''''x00000000;''''''':WWWW\nWWWK''''''''oWWWWWWWWd''''''''0WWWWWWWW;''''''':WWWW\nWWWK''''''''oWWWWWWWWd''''''''0WWWWWWWW;''''''':WWWW\nWWWK''''''''oWWWWWWWWd''''''''0WWWWWWWW;''''''':WWWW\nWWWNxxxxxxxx0WWWWWWWW0xxxxxxxxXWWWWWWWWkxxxxxxxkWWWW\nWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW\nWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW\ngithub.com/hallvaaw")
-
-export default {
-    name: 'App',
-    components: {
-        CVPage,
-        AboutPage
-    },
-    data() {
-        return {
-            CVComp: false,
-            AboutComp: true
-        }
-    },
-    methods: {
-        onClick(e) {
-            this.selectedItem = ""
-        },
-        openCVComp() {
-            this.CVComp = true
-            this.AboutComp = false
-        },
-        openAboutComp() {
-            this.AboutComp = true
-            this.CVComp = false
-        }
-    }
-}
 </script>
