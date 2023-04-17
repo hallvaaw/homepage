@@ -8,7 +8,7 @@
            <li>Python</li>
            <li>R</li>
            <li>Vue</li>
-           <li>Svelte</li>
+           <li>Tauri</li>
            <li>Linux</li>
         </ul>
         <h3>Current projects:</h3>
