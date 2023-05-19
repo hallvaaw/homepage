@@ -1,9 +1,9 @@
 <template>
     <main class="container">
-        <h1 styl>Hallvard A. Wæhler</h1>
+        <h1>Hallvard A. Wæhler</h1>
         <p>I am a bioinformatician and software developer at the University of Oslo.</p>
         <p>I am involved in research projects focusing on biological image analysis and genetics. My main tasks include writing data pipelines, making desktop applications, statistical analysis and front end development.</p>
-        <h5>Main technologies:</h5>
+        <h5>Favorite technologies:</h5>
         <ul style="margin-left: 26px;">
            <li>Python</li>
            <li>R</li>
@@ -12,8 +12,8 @@
            <li>Linux</li>
         </ul>
         <h3 style="margin-bottom: 20px;">Current projects:</h3>
-        <p>ANDA: A desktop application for automated image analysis made with Tauri.</p>
-        <p>ShinyArchRUiO: A platform for visualizing genetic analyses at single cell resolution written in R.</p>
+        <p>ANDA: A desktop application for automated image analysis of neuronal cells.</p>
+        <p>ShinyArchRUiO: A platform for visualizing genetic analyses at single cell resolution.</p>
     </main>
     <footer class="container">
         <h3 style="margin-bottom: 20px;">Contact</h3>
