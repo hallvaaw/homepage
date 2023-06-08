@@ -14,6 +14,7 @@
         <h3 style="margin-bottom: 20px;">Current projects:</h3>
         <p>ANDA: A desktop application for automated image analysis of neuronal cells.</p>
         <p>ShinyArchRUiO: A platform for visualizing genetic analyses at single cell resolution.</p>
+        <p>pydrc: A Python library for dose-response models.</p>
     </main>
     <footer class="container">
         <h3 style="margin-bottom: 20px;">Contact</h3>
