@@ -6,15 +6,15 @@
         <h5>Favorite technologies:</h5>
         <ul style="margin-left: 26px;">
            <li>Python</li>
-           <li>R</li>
            <li>Vue</li>
            <li>Tauri</li>
            <li>Linux</li>
+           <li>Julia</li>
         </ul>
         <h3 style="margin-bottom: 20px;">Current projects:</h3>
-        <p>ANDA: A desktop application for automated image analysis of neuronal cells.</p>
-        <p>ShinyArchRUiO: A platform for visualizing genetic analyses at single cell resolution.</p>
-        <p>pydrc: A Python library for dose-response models.</p>
+        <p style="margin-bottom: 16px;">ANDA: A desktop application for automated image analysis of neuronal cells.</p>
+        <p style="margin-bottom: 16px;">pydrc: A Python library for dose-response models.</p>
+        <p>LINE mine: A web application for visualizing LINE-1 transcripts.</p>
     </main>
     <footer class="container">
         <h3 style="margin-bottom: 20px;">Contact</h3>
