@@ -17,9 +17,7 @@
         <p>LINE mine: A web application for visualizing LINE-1 transcripts.</p>
     </main>
     <footer class="container">
-        <h3 style="margin-bottom: 20px;">Contact</h3>
         <h6 style="margin-bottom: 6px;"><a href="https://github.com/hallvaaw" target="_blank" rel="noopener noreferrer">GitHub</a></h6>
-        <h6><a href="https://www.linkedin.com/in/hallvard-austin-wæhler/" target="_blank" rel="noopener noreferrer">LinkedIn</a></h6>
     </footer>
 </template>
 
