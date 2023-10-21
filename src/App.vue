@@ -1,6 +1,6 @@
 <template>
     <main class="container">
-        <h1>Hallvard A. Wæhler</h1>
+        <h1>Hallvard Wæhler</h1>
         <h5>Favorite technologies:</h5>
         <ul style="margin-left: 26px;">
            <li>Python</li>
