@@ -2,7 +2,7 @@
     <main class="container">
         <h1>Hallvard Wæhler</h1>
         <h5>Favorite technologies:</h5>
-        <ul style="margin-left: 26px;">
+        <ul style="margin-left: 20px;">
            <li>Python</li>
            <li>Vue</li>
            <li>Tauri</li>
