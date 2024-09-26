@@ -21,7 +21,7 @@ export default {
     },
     methods: {
         async getWeather() {
-               const res = await fetch('https://api.met.no/weatherapi/locationforecast/2.0/compact?lat=66.53&lon=26.33')
+               const res = await fetch('https://api.met.no/weatherapi/locationforecast/2.0/compact?lat=59.9369&lon=10.7600')
                const data = await res.json()
                console.log(data.properties.timeseries[0].data.next_6_hours.summary)
             
