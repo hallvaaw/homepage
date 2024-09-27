@@ -1,10 +1,19 @@
 <template>
     <main class="container">
         <h1>Hallvard Wæhler</h1>
-    </main>
+        <h4>Bysykler: </h4>
+    <div class="col-4">
+        <table>
+            <tr v-for="(key, value) in myDictionary" :key="key">
+                <td>{{ value }}</td>
+                <td>{{ key }}</td>
+            </tr>
+        </table>
+    </div>
     <footer class="container">
         <h6 style="margin-bottom: 6px;"><a href="https://github.com/hallvaaw" target="_blank" rel="noopener noreferrer">GitHub</a></h6>
     </footer>
+</main>
 </template>
 <style>
     body.dark {
@@ -23,7 +32,9 @@ console.log("WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW\nWWWWWWWWWWWWW
 export default {
     name: 'App',
     data() {
-    return {}
+    return {
+        myDictionary: {},
+        }
     },
     mounted() {
         this.getWeather(),
@@ -39,14 +50,17 @@ export default {
             const res = await fetch('https://gbfs.urbansharing.com/oslobysykkel.no/station_status.json')
             const data = await res.json()
             const stasjoner = {
-                "Bjølsen studenby": 175,
-                "Badebakken": 66,
-                "Stavangergata": 84,
-                "Tåsenløkka": 118,
-                "Bentsebrugata": 147,
-                "Bjølsendumpa": 195,
-                "Myraløkka Øst": 117
+                "Bjølsen studenby": data.data.stations[175].num_bikes_available,
+                "Badebakken": data.data.stations[66].num_bikes_available,
+                "Stavangergata": data.data.stations[84].num_bikes_available,
+                "Tåsenløkka": data.data.stations[118].num_bikes_available,
+                "Bentsebrugata": data.data.stations[147].num_bikes_available,
+                "Bjølsendumpa": data.data.stations[195].num_bikes_available,
+                "Myraløkka Øst": data.data.stations[117].num_bikes_available,
+                "Sagene bussholdeplass": data.data.stations[141].num_bikes_available,
+                "Arendalsgata": data.data.stations[156].num_bikes_available
             } 
+            this.myDictionary = stasjoner
             let entries = Object.entries(stasjoner)
             entries.forEach(function([key, value]) {
                 console.log(key, data.data.stations[value].num_bikes_available)
