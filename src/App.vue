@@ -6,7 +6,7 @@
         <table>
             <tr v-for="(key, value) in myDictionary" :key="key">
                 <td>{{ value }}</td>
-                <td>{{ key }}</td>
+                <td><div :style="{ backgroundColor: key.color_code}" class="key-text">{{ key.available_bikes }}</div></td>
             </tr>
         </table>
     </div>
@@ -22,6 +22,14 @@
       --font-color: #f5f5f5;
       --color-grey: #ccc;
       --color-darkGrey: #777;
+    }
+    .key-text {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        height: 30px;
+        width: 30px;
     }
 </style>
 
@@ -50,21 +58,46 @@ export default {
             const res = await fetch('https://gbfs.urbansharing.com/oslobysykkel.no/station_status.json')
             const data = await res.json()
             const stasjoner = {
-                "Bjølsen studenby": data.data.stations[175].num_bikes_available,
-                "Badebakken": data.data.stations[66].num_bikes_available,
-                "Stavangergata": data.data.stations[84].num_bikes_available,
-                "Tåsenløkka": data.data.stations[118].num_bikes_available,
-                "Bentsebrugata": data.data.stations[147].num_bikes_available,
-                "Bjølsendumpa": data.data.stations[195].num_bikes_available,
-                "Myraløkka Øst": data.data.stations[117].num_bikes_available,
-                "Sagene bussholdeplass": data.data.stations[141].num_bikes_available,
-                "Arendalsgata": data.data.stations[156].num_bikes_available
+                "Bjølsen studentby": {
+                    available_bikes: data.data.stations[175].num_bikes_available, color_code: this.setColor(data.data.stations[175].num_bikes_available)
+                },
+                "Badebakken": {
+                    available_bikes: data.data.stations[66].num_bikes_available, color_code: this.setColor(data.data.stations[66].num_bikes_available)
+                },
+                "Stavangergata": {
+                    available_bikes: data.data.stations[84].num_bikes_available, color_code: this.setColor(data.data.stations[84].num_bikes_available)
+                },
+                "Tåsenløkka": {
+                    available_bikes: data.data.stations[118].num_bikes_available, color_code: this.setColor(data.data.stations[118].num_bikes_available)
+                },
+                "Bentsebrugata": {
+                    available_bikes: data.data.stations[147].num_bikes_available, color_code: this.setColor(data.data.stations[147].num_bikes_available)
+                },
+                "Bjølsendumpa": {
+                    available_bikes: data.data.stations[195].num_bikes_available, color_code: this.setColor(data.data.stations[195].num_bikes_available)
+                },
+                "Myraløkka Øst": {
+                    available_bikes: data.data.stations[117].num_bikes_available, color_code: this.setColor(data.data.stations[117].num_bikes_available)
+                },
+                "Sagene bussholdeplass": {
+                    available_bikes: data.data.stations[141].num_bikes_available, color_code: this.setColor(data.data.stations[141].num_bikes_available)
+                },
+                "Arendalsgata": {
+                    available_bikes: data.data.stations[156].num_bikes_available, color_code: this.setColor(data.data.stations[156].num_bikes_available)
+                }
             } 
             this.myDictionary = stasjoner
-            let entries = Object.entries(stasjoner)
-            entries.forEach(function([key, value]) {
-                console.log(key, data.data.stations[value].num_bikes_available)
-            })
+        },
+        setColor(num_bikes) {
+            if (num_bikes >= 10) {
+                return "#28a745";
+            } else if (num_bikes > 5 && num_bikes < 10) {
+                return "#d4d700";
+            } else if (num_bikes > 0 && num_bikes < 6) {
+                return "#ffc107";
+            } else {
+                return "#dc3545";
+            }
         }
     }
 }
