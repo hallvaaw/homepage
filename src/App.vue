@@ -1,7 +1,7 @@
 <template>
     <main class="container">
         <h1>Hallvard Wæhler</h1>
-        <h4>Bysykler: </h4>
+        <h4>API test: </h4>
     <div class="col-4">
         <table>
             <tr v-for="(key, value) in myDictionary" :key="key">
