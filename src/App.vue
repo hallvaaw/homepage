@@ -2,7 +2,7 @@
     <main class="container">
         <h1>Hallvard Wæhler</h1>
     <div style="display: none;">
-  <p>
+  <!--p>
     Hallvard Wæhler completed his PhD in entomology at the University of Oslo in 2009.
   </p>
   <p>
@@ -13,7 +13,7 @@
   </p>
     <p>
         In his spare time, Wæhler is an avid football enthusiast and likes to combine his sport interest with data analyst methods using Python.
-    </p>
+    </p-->
 </div>
     <footer class="container">
         <h6 style="margin-bottom: 6px;"><a href="https://github.com/hallvaaw" target="_blank" rel="noopener noreferrer">GitHub</a></h6>
