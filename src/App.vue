@@ -1,15 +1,6 @@
 <template>
     <main class="container">
         <h1>Hallvard Wæhler</h1>
-        <h4>Bysykler: </h4>
-    <div class="col-4">
-        <table>
-            <tr v-for="(key, value) in myDictionary" :key="key">
-                <td>{{ value }}</td>
-                <td><div :style="{ backgroundColor: key.color_code}" class="key-text">{{ key.available_bikes }}</div></td>
-            </tr>
-        </table>
-    </div>
     <footer class="container">
         <h6 style="margin-bottom: 6px;"><a href="https://github.com/hallvaaw" target="_blank" rel="noopener noreferrer">GitHub</a></h6>
     </footer>
