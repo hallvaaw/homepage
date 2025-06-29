@@ -1,20 +1,6 @@
 <template>
     <main class="container">
         <h1>Hallvard Wæhler</h1>
-    <div style="display: none;">
-  <!--p>
-    Hallvard Wæhler completed his PhD in entomology at the University of Oslo in 2009.
-  </p>
-  <p>
-    After his PhD, he continued research as a full time researcher at the Natural History Museum in Oslo studiying the phylogeny of coleoptera (beetles) by developing novel imaging analysis software.
-  </p>
-  <p>
-    Following career as researcher, Wæhler ensued a career as research manager, mainly focusing on acquiring grant money and visibility for entomology research in Norway and the Caucasus region.
-  </p>
-    <p>
-        In his spare time, Wæhler is an avid football enthusiast and likes to combine his sport interest with data analyst methods using Python.
-    </p-->
-</div>
     <footer class="container">
         <h6 style="margin-bottom: 6px;"><a href="https://github.com/hallvaaw" target="_blank" rel="noopener noreferrer">GitHub</a></h6>
     </footer>
